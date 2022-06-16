@@ -26,7 +26,7 @@ void readfile(char *filename)
 		if (tokens == NULL)
 			continue;
 		else
-			get_op_func(token, line_number)(&stack, line_number);
+			get_op_func(tokens, line_number)(&stack, line_number);
 	}
 	fclose(file);
 	free(buffer);

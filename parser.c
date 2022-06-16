@@ -24,13 +24,13 @@ char **parse_line(char *line)
 		return (NULL);
 	}
 	i = 0;
-	while (tokens != NULL && i < 2)
+	while (token != NULL && i < 2)
 	{
 		tokens[i] = token;
-		token = strtok(NULL " '\n'");
+		token = strtok(NULL, " '\n'");
 		i++;
 	}
-	token[i] = NULL;
+	tokens[i] = NULL;
 	return (tokens);
 }
 int arg = 0; /* global (extern) variable defined in header */
